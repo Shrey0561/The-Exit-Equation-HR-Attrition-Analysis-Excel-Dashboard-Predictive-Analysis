@@ -2,14 +2,11 @@
  > Self-initiated project to practice HR analytics, Excel dashboarding, and predictive modeling skills.
 
 ## TL;DR
-**Problem**: **16% of employees were leaving,** driving up costs and operational risks; the reasons were unclear.
+**Problem**: **16% of employees were leaving,** but risk drivers weren't clearly quantified across departments and tenure groups.
 
-**Process**: Analyzed **1,470 employees in Excel,** segmenting by department, role, tenure, satisfaction, and workload. Then, **Logistic Regression** was used to predict attrition and identify key drivers.
+**Process**: Analyzed **1,470 employee records using Excel dashboards** and **logistic regression** to segment attrition risk by tenure, overtime, income, satisfaction, and role.
 
-**Result**: 
- * **High-risk areas**: Sales (**20.63% attrition**), employees with overtime (**30.53%**)
- * **Key drivers**: Low work-life balance, poor job satisfaction, lower income bands, fresh hires
- * **Actionable takeaway**: Implement targeted onboarding, compensation adjustments, burnout prevention, and role support expected to reduce early exits.
+**Result**: **Fresh hires (0-1 year)** show **34.88%** attrition, and overtime employees are 3x more likely to leave, highlighting early-stage burnout and workload imbalance as primary risk factors.
 
 ## Dashboard & Predictive Highlights
 ## Excel Dashboard
@@ -22,14 +19,15 @@
 Interactive charts enable HR to **instantly identify trends and high-risk groups,** while predictive modeling highlights the employees most likely to leave, turning insights into actionable steps.
 
 ## Predictive Analysis (Logistic Regression)
+The model enables HR to prioritize intervention for high-risk employees before resignation occurs.
 
-* Model predicts the probability of attrition for individual employees
 * **Key Insights from the Model:**
-   - OverTime increases the likelihood of leaving
+   - Over time increases the likelihood of leaving
    - Higher Job Satisfaction decreases attrition
    - Single employees and certain job roles are more likely to leave
   - Feature importance charts & probability plots highlight actionable drivers
-
+> The model achieved interpretable feature importance outputs, allowing HR stakeholders to understand not just who is at risk, but why.
+ 
 ![Overtime Predictive Model Preview](overtime_predictive_preview.png)
 
 ## Table of Contents
@@ -38,7 +36,6 @@ Interactive charts enable HR to **instantly identify trends and high-risk groups
  - [KPIs Tracked](#kpis-tracked)
  - [Business Insights & Strategic Recommendations](#business-insights--strategic-recommendations)
  - [Tools Used](#tools-used)
- - [Case Study: Behind the Queries](#case-study-behind-the-queries)
  - [What I'd Explore Next](#what-id-explore-next)
  - [What This Project Demonstrates](#what-this-project-demonstrates)
  - [Let's Connect](#lets-connect)
@@ -60,51 +57,49 @@ This analysis leverages a **synthetic HR dataset of 1,470 employees** to uncover
  * **Highest Attrition Role**: Sales Representative (39.76%) 
 
 ## Business Insights & Strategic Recommendations
+> These findings shift attrition from a historical metric to a forward-looking risk management tool.
+
 ## Departmental Trends
 - **Sales:** 20.63% attrition
 - **Human Resources:** 19.05% attrition
 
-**Recommendation:** Audit job expectations and workloads in high-turnover departments to reduce exit risk.
+**Recommendation:** Reassess quota pressure, performance incentives, and support structure in high-attrition departments like **Sales** to reduce burnout-driven exits.
 
 ## Role-Specific Breakdown
 - **Sales Representatives:** 39.76% attrition (≈4x company average)
 - **Research Directors:** 2.5% attrition
 
-**Observation:** Entry-level or quota-driven roles may need better support systems or incentive realignment.
+**Recommendation:** Introduce structured onboarding support and incentive recalibration for quota-driven roles to stabilize early attrition.
 
 ## Gender-Based Patterns
 Male attrition: **17.01%** | Female attrition: **14.80%**
 
-Recommendation: Examine role distribution and promotion equity to investigate whether inequities in promotions or role allocation are driving gender differences.
+**Recommendation:** Conduct role-level and promotion-cycle audits to determine whether advancement velocity or workload distribution differs by gender.
 
 ## Overtime & Burnout
 - **Overtime employees:** **30.53%** attrition vs **10.44%** for others
 
- **Recommendation:** Monitor overtime and implement burnout prevention in high-pressure roles.
+ **Recommendation:** Reallocate workload or redesign incentive structures in overtime-heavy teams to reduce burnout-driven exits.
 
 ## Compensation & Retention 
 - **Lower-income employees:** **28.61%** attrition
 
-**Recommendation:** Strengthen pay transparency and progression frameworks.
+**Recommendation:** Reassess compensation bands for lower-income cohorts to mitigate income-driven attrition risk.
 
 ## Tenure & Retention 
 - **Fresh hires (0-1 yrs):** **34.88%** attrition vs **12.91%** for 5+ year employees.
 
-**Recommendation:** Prioritize onboarding quality and engagement touchpoints in the first 6 months.
+**Recommendation:** Introduce structured 30-60-90 day onboarding check-ins and early engagement interventions to reduce first-year attrition.
 
 ## Satisfaction Metrics
 - **Work-Life Balance:** 31.25% attrition
 - **Job Satisfaction:** 22.84% attrition
 
-**Recommendation:** Use pulse surveys to detect early dissatisfaction and implement proactive interventions.
+**Recommendation:** Integrate quarterly pulse surveys with attrition probability scores to proactively intervene in high-risk employee segments.
 
 ## Tools Used
 * **Microsoft Excel** - Data cleaning, pivot tables, KPI tracking, and dashboard design.
 * **Python (Pandas + scikit-learn + matplotlib):** Predictive modeling, feature importance, probability plots
-  
-## Case Study (Full Walkthrough)
-For a deeper look at the analysis logic, segmentation methodology, and strategic recommendations, explore the full HR case study below:
-[View the full case study](https://docs.google.com/document/d/1UvtNh63Pqlk9doOYvelR3UggBd_6P2AbMk_uvuq11EQ/edit?usp=sharing)
 
 ## What I'd Explore Next
 As a next step to deepen this analysis:
